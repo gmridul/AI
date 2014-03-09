@@ -1,0 +1,10 @@
+No. of hidden layers : Enter the no. of inputs : Enter the no. of perceptrons in the hidden layers : Enter the no. of perceptrons in the output layer : Enter the truth table
+0 0 1 
+-1 -1 1 
+0 1 -1 
+1 0 -1 
+ai shabash
+hidno = 0
+hidno = 1
+hidno = 2
+o->at(i)0 
