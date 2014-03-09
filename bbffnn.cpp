@@ -4,9 +4,9 @@
 #include <vector>
 #include <ctime>
 
-#define LEARNING_RATE 0.5
-#define MOMENTUM 0.1
-#define MAX_ERROR 8.0
+#define LEARNING_RATE 0.7
+#define MOMENTUM 0.0
+#define MAX_ERROR 1.9
 
 
 //input.txt -> XOR
@@ -168,7 +168,7 @@ int main(){
                 int acc=0,tot=0;
                 while(1) {
                     cin >> a[0];
-                    if(a[0]==-1) {cout << acc << "/"<<tot<<endl; return 0;}
+                    if(a[0]==-1) {cout << acc << "/"<<tot<< " " << iter<<endl; return 0;}
                     else {
                         cin >> a[1] >> a[2];
                         for(int testinp=0;testinp<inp;testinp++) {
@@ -189,6 +189,7 @@ int main(){
                         if(output[layers][f]>=0.5) output[layers][f]=1;
                         else output[layers][f]=0;
                     }
+                    cout << acc<<"/"<<tot<< " " << iter<<endl;
 
                     if(a[0]+a[1]*2+a[2]*4==output[layers][0]+output[layers][1]*2+output[layers][2]*4) {
                        acc++;
