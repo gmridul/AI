@@ -51,7 +51,7 @@ void delete_useless_words(){
 	vector<pair<string,int> > tmp_vec;
 
 	for (it=distinct_words.begin(); it!=distinct_words.end(); ++it){
-		if(it->second <= 1){
+		if(it->second <= 0){
 		}
 		else{
 			tmp_vec.push_back(make_pair(it->first,0));
@@ -245,28 +245,4 @@ int main(){
 		indices.clear();
 	}    
 	    
-	// for(int i=0;i<input_files.size();i++){
-	// 	myfile.open (input_files[i].first.c_str());
-	// 	while (getline (myfile,line) )
-	// 	    {
-	// 	      parse(replace_useless(line));
-	// 	    }
-	// 	    myfile.close();			
-	// }	
-
- //  	delete_useless_words();
-  	
- //  	vector<int> v;
-
- //  	for(int i=0;i<input_files.size();i++){
-
-	// 		myfile.open (input_files[i].first.c_str());
-	// 	  	while (getline (myfile,line) ){
-	// 	      cout<<input_files[i].second;
-	// 	      v = generatevector(replace_useless(line));
-	// 	  		print_vector(v);
-	// 	  	}
-	// 	  	myfile.close();  		
- //  	}
-
 }
