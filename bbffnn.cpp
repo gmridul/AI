@@ -5,8 +5,8 @@
 #include <ctime>
 
 #define LEARNING_RATE 0.7
-#define MOMENTUM 0.0
-#define MAX_ERROR 1.9
+#define MOMENTUM 0.2
+#define MAX_ERROR 2.0
 
 
 //input.txt -> XOR
@@ -170,7 +170,7 @@ int main(){
                     cin >> a[0];
                     if(a[0]==-1) {cout << acc << "/"<<tot<< " " << iter<<endl; return 0;}
                     else {
-                        cin >> a[1] >> a[2];
+                        cin >> a[1];
                         for(int testinp=0;testinp<inp;testinp++) {
                             cin>>output[0][testinp];
                         }
@@ -185,13 +185,13 @@ int main(){
                             }
                         }    
                     }
-                    for(int f=0;f<3;f++) {
+                    for(int f=0;f<2;f++) {
                         if(output[layers][f]>=0.5) output[layers][f]=1;
                         else output[layers][f]=0;
                     }
                     cout << acc<<"/"<<tot<< " " << iter<<endl;
 
-                    if(a[0]+a[1]*2+a[2]*4==output[layers][0]+output[layers][1]*2+output[layers][2]*4) {
+                    if(a[0]+a[1]*2==output[layers][0]+output[layers][1]*2) {
                        acc++;
                     }
                     tot++;
